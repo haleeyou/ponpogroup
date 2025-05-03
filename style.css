@@ -59,16 +59,24 @@
     height: auto;
   }
   
+  nav {
+    position: relative;
+  }
+  
+  .nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+  }
+  
   nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
     position: relative;
-  }
-
-  nav {
-    display: flex;
-    gap: 1.5rem; /* space between links */
   }
   
   nav li {
@@ -226,3 +234,38 @@
     text-align: center;
   }
   
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #000;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    nav ul ul {
+      position: static;
+      box-shadow: none;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+    }
+  }
